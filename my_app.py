@@ -9,9 +9,9 @@ app = Flask(__name__)
 #decorator
 @app.route("/")
 def echo_hello():
-    return """Nobel Prize Recipients:
-            1) Add "all" to the end of the URL above to see all recipients
-            2) Add "all/<year>" to see a list of recipients from that year"""
+    return """Nobel Prize Recipients Data Access:
+            (1) Add "all" to the end of the URL above to see all recipients
+            (2) Add "all/year" to see a list of recipients from that year -- example: all/2008 """
 
 @app.route("/all")
 def gdp():
