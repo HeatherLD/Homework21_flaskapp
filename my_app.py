@@ -20,12 +20,12 @@ def prize_data():
 
     return render_template('index.html',data=data_json)
 
-@app.route("/all/<year>", methods=['GET'])
+@app.route("/all/<year>")
 def prize_year(year):
     json_url = os.path.join(app.static_folder,"","nobel.json")
     data_json = json.load(open(json_url))
 
-    data = data_json['year']
+    data = data_json[1]
     #print(data)
     year = request.view_args['year']
 
