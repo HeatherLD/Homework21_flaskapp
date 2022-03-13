@@ -32,10 +32,6 @@ def prize_year(year):
     output_data = [x for x in data if x['year']==year]
     return render_template('index.html',data=output_data)
 
-@app.route("/all/<category>", methods=['POST'])
-def prize_subject(category):
-    return 'Category: %s' % category
-
 
 
 if __name__ == "__main__":
