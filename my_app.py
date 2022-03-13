@@ -40,10 +40,10 @@ def prize_subject(category):
 def login():
     if request.method == 'POST':
         user = request.form['category']
-          return redirect(url_for('prize_subject', category = user))
+        return redirect(url_for('prize_subject', category = user))
     else:
         user = request.args.get('category')
-          return redirect(url_for('prize_subject', category = user))
+        return redirect(url_for('prize_subject', category = user))
 
 if __name__ == "__main__":
     app.run(debug=True)
